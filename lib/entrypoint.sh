@@ -90,10 +90,10 @@ if [ -z "$INPUT_VANILLAMODE" ] || [ "$INPUT_VANILLAMODE" = "" ] || [ "$INPUT_VAN
     mv -v cwtools-cache-files/$CWB_GAME.cwv.bz2 .
   else
     echo "Using full game cache from '$CW_WORKSPACE/$INPUT_CACHE'..."
-    mv -v $CW_WORKSPACE/$INPUT_CACHE ./$INPUT_CACHE
+    mv -v $CW_WORKSPACE/$INPUT_CACHE /$INPUT_CACHE
 
-    if [ ! -f "$INPUT_CACHE" ]; then
-        echo "$INPUT_CACHE does not exist!"
+    if [ ! -f "/$INPUT_CACHE" ]; then
+        echo "/$INPUT_CACHE does not exist!"
         exit 1
     fi
   fi
